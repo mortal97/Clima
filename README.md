@@ -1,24 +1,24 @@
 # 🌤️ Weather App
 
-Aplicación sencilla para consultar el clima actual de cualquier ciudad utilizando la API de OpenWeatherMap.
+A simple application to check the current weather of any city using the OpenWeatherMap API.
 
-## Tecnologías
+## Technologies
 - HTML
 - TailwindCSS
-- JavaScript Vanilla
+- Vanilla JavaScript
 
-## Uso
-1. Clona este repositorio.
-2. Reemplaza `API_KEY` en `js/app.js` con tu propia clave de OpenWeatherMap.
-3. Abre `index.html` en tu navegador.
+## How to Use
+1. Clone this repository.
+2. Replace the `API_KEY` value in `js/app.js` with your own OpenWeatherMap API key.
+3. Open `index.html` in your browser.
 
-## Estructura
-- `index.html` — Página principal.
-- `css/style.css` — Estilos personalizados.
-- `js/app.js` — Lógica para consumir la API y mostrar datos.
+## Project Structure
+- `index.html` — Main page.
+- `css/style.css` — Custom styles.
+- `js/app.js` — Application logic and API interaction.
 
-## Créditos
-- API de [OpenWeatherMap](https://openweathermap.org/api)
-- TailwindCSS para los estilos.
+## Credits
+- [OpenWeatherMap API](https://openweathermap.org/api)
+- TailwindCSS for styling.
 
 ---

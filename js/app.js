@@ -1,4 +1,4 @@
-const API_KEY = 'dd6f451e5f753f3ca0a2e6c8a192d0f6'; // Tu clave de OpenWeatherMap
+const API_KEY = 'dd6f451e5f753f3ca0a2e6c8a192d0f6'; // Your OpenWeatherMap API Key
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 const cityInput = document.getElementById('city-input');
@@ -6,24 +6,24 @@ const searchButton = document.getElementById('search-button');
 const weatherResult = document.getElementById('weather-result');
 const errorMessage = document.getElementById('error-message');
 
-// Mostrar error
+// Display error
 function displayError(message) {
   errorMessage.textContent = message;
   errorMessage.classList.remove('hidden');
   weatherResult.innerHTML = '';
 }
 
-// Ocultar error
+// Hide error
 function hideError() {
   errorMessage.classList.add('hidden');
   errorMessage.textContent = '';
 }
 
-// Mostrar clima
+// Display weather data
 function displayWeather(data) {
   hideError();
   if (!data || data.cod !== 200) {
-    displayError(data?.message || 'No se encontró la ciudad o hubo un error.');
+    displayError(data?.message || 'City not found or an error occurred.');
     return;
   }
   const cityName = data.name;
@@ -39,10 +39,10 @@ function displayWeather(data) {
   `;
 }
 
-// Llamar API
+// Fetch weather data
 async function fetchWeather(city) {
   if (!city) {
-    displayError('Por favor, introduce el nombre de una ciudad.');
+    displayError('Please enter a city name.');
     return;
   }
   try {
@@ -53,11 +53,11 @@ async function fetchWeather(city) {
     displayWeather(data);
   } catch (error) {
     console.error('Error fetching weather:', error);
-    displayError(error.message.includes('404') ? `Ciudad "${city}" no encontrada.` : 'Error al obtener los datos. Inténtalo luego.');
+    displayError(error.message.includes('404') ? `City "${city}" not found.` : 'Failed to fetch weather data. Please try again later.');
   }
 }
 
-// Eventos
+// Event listeners
 searchButton.addEventListener('click', () => {
   const city = cityInput.value.trim();
   fetchWeather(city);
