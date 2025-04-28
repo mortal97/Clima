@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicación del Clima</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+  <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-md">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Consulta el Clima</h1>
+
+    <div class="flex mb-6 rounded-md shadow-sm overflow-hidden">
+      <input type="text" id="city-input" placeholder="Introduce la ciudad" class="form-input block w-full px-4 py-2 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+      <button id="search-button" class="px-6 py-2 bg-blue-600 text-white font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition ease-in-out duration-150">Buscar</button>
+    </div>
+
+    <div id="weather-result" class="text-center text-gray-700">
+      <p class="text-gray-500">Introduce una ciudad para ver el clima.</p>
+    </div>
+
+    <div id="error-message" class="text-center text-red-600 mt-4 hidden"></div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
